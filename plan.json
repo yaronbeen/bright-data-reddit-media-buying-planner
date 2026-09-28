@@ -1,0 +1,41 @@
+{
+  "sample_size": 4,
+  "decision": "pilot_candidate",
+  "basis": "A bounded public-post sample only; candidate test venues require human review.",
+  "evidence": [
+    {
+      "url": "https://www.reddit.com/r/saas/comments/a1/ops_tools/",
+      "title": "What tools do you use for SaaS analytics?",
+      "subreddit": "saas",
+      "observed_comments": 22,
+      "observed_upvotes": 18
+    },
+    {
+      "url": "https://www.reddit.com/r/startups/comments/b2/analytics/",
+      "title": "Analytics stack for early startups",
+      "subreddit": "startups",
+      "observed_comments": 16,
+      "observed_upvotes": 12
+    },
+    {
+      "url": "https://www.reddit.com/r/marketing/comments/c3/measurement/",
+      "title": "How are teams measuring campaigns?",
+      "subreddit": "marketing",
+      "observed_comments": 11,
+      "observed_upvotes": 9
+    },
+    {
+      "url": "https://www.reddit.com/r/smallbusiness/comments/d4/reporting/",
+      "title": "Monthly reporting workflow",
+      "subreddit": "smallbusiness",
+      "observed_comments": 8,
+      "observed_upvotes": 6
+    }
+  ],
+  "limits": [
+    "Not representative of subreddit membership or market demand.",
+    "Observed counters do not estimate ad reach, inventory, or sponsorship availability.",
+    "No authors or members are extracted as prospects."
+  ],
+  "topic": ""
+}
