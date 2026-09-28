@@ -1,41 +1,94 @@
 {
-  "sample_size": 4,
-  "decision": "pilot_candidate",
-  "basis": "A bounded public-post sample only; candidate test venues require human review.",
+  "topic": "analytics",
+  "subreddits": {
+    "marketing": {
+      "evidence_score": 0,
+      "sample_size": 1,
+      "relevant_sample_size": 0,
+      "discussion_posts": 0,
+      "observed_comments_in_relevant_sample": 0,
+      "decision": "insufficient_sample"
+    },
+    "saas": {
+      "evidence_score": 87,
+      "sample_size": 3,
+      "relevant_sample_size": 3,
+      "discussion_posts": 2,
+      "observed_comments_in_relevant_sample": 27,
+      "decision": "pilot_candidate"
+    },
+    "smallbusiness": {
+      "evidence_score": 0,
+      "sample_size": 1,
+      "relevant_sample_size": 0,
+      "discussion_posts": 0,
+      "observed_comments_in_relevant_sample": 0,
+      "decision": "insufficient_sample"
+    },
+    "startups": {
+      "evidence_score": 60,
+      "sample_size": 1,
+      "relevant_sample_size": 1,
+      "discussion_posts": 1,
+      "observed_comments_in_relevant_sample": 16,
+      "decision": "insufficient_sample"
+    }
+  },
   "evidence": [
     {
       "url": "https://www.reddit.com/r/saas/comments/a1/ops_tools/",
       "title": "What tools do you use for SaaS analytics?",
       "subreddit": "saas",
+      "matched_topic_terms": [
+        "analytics"
+      ],
       "observed_comments": 22,
       "observed_upvotes": 18
+    },
+    {
+      "url": "https://www.reddit.com/r/saas/comments/e5/analytics-stack/",
+      "title": "Analytics stack for a bootstrapped SaaS",
+      "subreddit": "saas",
+      "matched_topic_terms": [
+        "analytics"
+      ],
+      "observed_comments": 5,
+      "observed_upvotes": 8
+    },
+    {
+      "url": "https://www.reddit.com/r/saas/comments/f6/product-analytics/",
+      "title": "Product analytics recommendations",
+      "subreddit": "saas",
+      "matched_topic_terms": [
+        "analytics"
+      ],
+      "observed_comments": 0,
+      "observed_upvotes": 11
     },
     {
       "url": "https://www.reddit.com/r/startups/comments/b2/analytics/",
       "title": "Analytics stack for early startups",
       "subreddit": "startups",
+      "matched_topic_terms": [
+        "analytics"
+      ],
       "observed_comments": 16,
       "observed_upvotes": 12
-    },
-    {
-      "url": "https://www.reddit.com/r/marketing/comments/c3/measurement/",
-      "title": "How are teams measuring campaigns?",
-      "subreddit": "marketing",
-      "observed_comments": 11,
-      "observed_upvotes": 9
-    },
-    {
-      "url": "https://www.reddit.com/r/smallbusiness/comments/d4/reporting/",
-      "title": "Monthly reporting workflow",
-      "subreddit": "smallbusiness",
-      "observed_comments": 8,
-      "observed_upvotes": 6
     }
   ],
+  "heuristic": {
+    "minimum_relevant_posts_per_subreddit": 3,
+    "topic_matching": "A supplied post counts only when its title, description, or body contains a whole-word match for at least one topic term longer than two characters.",
+    "evidence_score": "0-100 triage score, not performance probability: up to 60 points for relevant-post sample size capped at the minimum (3), plus up to 40 points for the share of relevant posts with at least one observed comment.",
+    "pilot_candidate": "At least the minimum number of topic-matching posts in that subreddit and at least one observed comment across them.",
+    "insufficient_signal": "Minimum matched-post sample reached but no observed comments among matching posts."
+  },
   "limits": [
+    "Each subreddit is scored independently; no cross-subreddit overall threshold is used.",
+    "This keyword heuristic is not semantic relevance and may miss synonyms or match incidental mentions.",
+    "Evidence score is a triage convenience, not campaign outcome, audience size, or reach prediction.",
     "Not representative of subreddit membership or market demand.",
     "Observed counters do not estimate ad reach, inventory, or sponsorship availability.",
     "No authors or members are extracted as prospects."
-  ],
-  "topic": "analytics"
+  ]
 }
